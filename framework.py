@@ -126,7 +126,7 @@ def save_assembly(name: str, src: str, verbose: bool) -> str:
         f.write(src)
     if verbose:
         print(f"Wrote test to file: {filename}")
-    return filename
+    return os.fspath(filename)
 
 
 def _indent(lines: List[str]) -> List[str]:
